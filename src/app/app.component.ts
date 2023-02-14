@@ -1,4 +1,4 @@
-import { STRING_TYPE } from '@angular/compiler';
+ import { STRING_TYPE } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,10 +11,18 @@ export class AppComponent {
 
   imgUrl="../assets/image.jpg";
   bridgelabzLogo="https://www.bridgelabz.com/assets/images/BridgeLabz%20New%20Logo.svg";
+
+  url="https://www.bridgelabz.com/"
   
   ngOnInit(): void{
-    this.title="Hello from bridgelabz"
-
-  
+    this.title="Hello from bridgelabz"  
   }
+  onClick($event:any){
+    console.log("Button is clicked",$event);
+    window.open(this.url,"blank");
+  }
+  showUrl($event:any){
+    console.log(this.imgUrl)
+  }
+  
 }

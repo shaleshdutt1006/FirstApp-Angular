@@ -1,11 +1,10 @@
- 
-  <h1>{{this.title}}</h1>
+<h1>{{this.title}}</h1>
     <div>
-    <img [src]="imgUrl"
+    <img [src]="imgUrl" (dblclick)="showUrl($event)"
     alt="The Nature's Photo: To Grow more Trees"
     />
 </div>
 <div>
-  <img [src]="bridgelabzLogo" alt="bridgelabzLogo"
+  <img [src]="bridgelabzLogo" (click)="onClick($event)" alt="bridgelabzLogo"
   />
 </div>
