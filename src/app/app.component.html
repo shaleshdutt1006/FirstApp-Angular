@@ -1,10 +1,21 @@
-<h1>{{this.title}}</h1>
-    <div>
+<div>
+<h1>hello {{this.userName}}</h1>
+
     <img [src]="imgUrl" (dblclick)="showUrl($event)"
+    
     alt="The Nature's Photo: To Grow more Trees"
     />
 </div>
+
 <div>
   <img [src]="bridgelabzLogo" (click)="onClick($event)" alt="bridgelabzLogo"
   />
 </div>
+<div>
+
+<!-- this is two way binding in which we are taking input changing it and showing it it's symbol is[()] -->
+<br>
+  <input [(ngModel)] = "userName" /> 
+
+</div>
+

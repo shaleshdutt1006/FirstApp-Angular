@@ -10,5 +10,15 @@
   img{
     display: block;
     margin: 0 auto;
-    width: 20%;
+    width: 15%;
   }
+
+input{
+    align-items: center;
+    align-content: center;
+text-align: center;
+font-size: medium;
+margin-left: 43%;
+}
+
+    
