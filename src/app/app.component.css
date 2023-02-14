@@ -1,24 +1,37 @@
  h1 {
-    font-size: 70px;
+    font-size: 50px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 300;
     background-image: linear-gradient(to left, #553c9a, #b393d3);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
   }
-  img{
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 200;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  img {
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 15%;
   }
-
-input{
+  input{
     align-items: center;
     align-content: center;
 text-align: center;
 font-size: medium;
 margin-left: 43%;
 }
-
-    
+error-output{
+  margin-left: 10px;
+  font-size: 12px;
+  font-style: italic;
+  color: rgb(251, 6, 6);
+}

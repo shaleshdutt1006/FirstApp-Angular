@@ -8,12 +8,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-first-app';
-  imgUrl="../assets/image.jpg";
-  bridgelabzLogo="https://www.bridgelabz.com/assets/images/BridgeLabz%20New%20Logo.svg";
+  imgUrlSource="../assets/image.jpg";
+  bridgelabzLogoSource="https://www.bridgelabz.com/assets/images/BridgeLabz%20New%20Logo.svg";
   url="https://www.bridgelabz.com/"
-  userName: string="";
 
-  
+  userName: string="";
+ nameError: string="";
+
+ //Method to apply regex on the input userName
+onInput($event:any){
+  console.log("Change event occured",$event.data)
+  const nameRegex=RegExp('^[A-Z]{1}[a-z]{2,}');
+if(nameRegex.test(this.userName))
+{
+  this.nameError="";
+  return;
+}
+this.nameError="Name is Incorrect!"
+}
+
   ngOnInit(): void{
     this.title="Hello from bridgelabz"  
     }
@@ -24,8 +37,7 @@ export class AppComponent {
   }
 
   showUrl($event:any){
-    console.log(this.imgUrl)
-    alert("Image Is located in "+ this.imgUrl)
-  }
- 
+    console.log(this.imgUrlSource)
+    alert("Image Is located in "+ this.imgUrlSource)
+  } 
 }
