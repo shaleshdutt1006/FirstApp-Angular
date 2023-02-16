@@ -11,22 +11,38 @@ export class AppComponent {
   imgUrlSource="../assets/image.jpg";
   bridgelabzLogoSource="https://www.bridgelabz.com/assets/images/BridgeLabz%20New%20Logo.svg";
   url="https://www.bridgelabz.com/"
-
   userName: string="";
- nameError: string="";
+ firstNameError: string="";
+ lastNameError: string="";
+ companyNameError: string="";
+ firstName: string="";
+  lastName: string="";
+ companyName: string="";
 
  //Method to apply regex on the input userName
-onInput($event:any){
+ onInput($event:any){
   console.log("Change event occured",$event.data)
-  const nameRegex=RegExp('^[A-Z]{1}[a-z]{2,}');
-if(nameRegex.test(this.userName))
+  const NameRegex=RegExp('^[A-Z]{1}[a-z]{2,}');  
+if(NameRegex.test(this.firstName))
 {
-  this.nameError="";
+  this.firstNameError="";
   return;
+} else {this.firstNameError=" First Name is Incorrect!" 
 }
-this.nameError="Name is Incorrect!"
+  if (NameRegex.test(this.lastName)) {
+  this.lastNameError="";
+ return;
+}else {   
+  this.lastNameError=" Last Name is Incorrect!"
+}  
+  if (NameRegex.test(this.companyName)) {
+  this.companyNameError="";
+  return;
+ }else{ 
+    this.companyNameError=" Company Name is Incorrect!" 
 }
-
+}
+ 
   ngOnInit(): void{
     this.title="Hello from bridgelabz"  
     }

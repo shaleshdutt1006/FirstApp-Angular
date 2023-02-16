@@ -1,25 +1,40 @@
   <div>
-    <h1>hello {{this.userName}}</h1>
+    <h1>hello {{this.companyName}}</h1>
+    <h2>My firstName is {{firstName}} and lastName is {{lastName}}</h2>
     <img [src]="imgUrlSource" (dblclick)="showUrl($event)"
     
     alt="The Nature's Photo: To Grow more Trees"
     />
 </div>
-
 <div>
   <img [src]="bridgelabzLogoSource" (click)="onClick($event)" alt="bridgelabzlogo"
   />
  <br> 
 </div>
 <div> 
-<!-- this is two way binding in which we are taking input changing it and showing it it's symbol is[()] -->
- <br>
-  <input (input)="onInput($event)" [(ngModel)] = "userName" /> 
+ <!-- this is two way binding in which we are taking input changing it and showing it it's symbol is[()] 
+ <br> -->
+   <!-- <input (input)="onInput($event)" [(ngModel)] = "userName" /> 
 
-  <!-- The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element. 
-    <span> tag is used to styled by CSS manipulated with JavaScript using the class or id attribute.  -->
+  The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element. 
+    <span> tag is used to styled by CSS manipulated with JavaScript using the class or id attribute. 
       
-  <span class="error-output">{{this.nameError}}</span>
+  <span class="error-output">{{this.nameError}}</span>  -->
+  
+  
+</div>
+<div>
+<label >Enter Company Name:</label>
+<input (input)="onInput($event)" type="text" name="Company" [(ngModel)]="companyName">
+<span class=error-output>{{this.companyNameError}}</span>
+<br><br>
+<label >Enter firstName:</label>
+<input (input)="onInput($event)" type="text" name="firstName" [(ngModel)]="firstName">
+<span class=error-output>{{this.firstNameError}}</span>
+<br><br>
+<label >Enter lastName:</label>
+<input (input)="onInput($event)" type="text" name="lastName" [(ngModel)]="lastName">
+<span class=error-output>{{this.lastNameError}}</span>
 </div>
 
 

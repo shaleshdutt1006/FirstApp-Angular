@@ -2,7 +2,7 @@
     font-size: 50px;
     text-align: center;
     font-weight: 300;
-    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    background-image: linear-gradient(to left, #553c9a, #0f021d);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -11,7 +11,7 @@
     font-size: 20px;
     text-align: center;
     font-weight: 200;
-    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    background-image: linear-gradient(to left, #531ce9, #8a57bd);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -22,16 +22,30 @@
     margin-right: auto;
     width: 15%;
   }
-  input{
+  /* input{
     align-items: center;
     align-content: center;
 text-align: center;
 font-size: medium;
 margin-left: 43%;
-}
+} */
 error-output{
   margin-left: 10px;
   font-size: 12px;
   font-style: italic;
   color: rgb(251, 6, 6);
 }
+
+input{
+  margin-left: 43%;  
+  margin-right:  auto;
+   
+ } 
+ label{
+   margin-left: 44%;  
+   margin-right:  auto;
+   text-align: center;
+   font-size: large;
+ align-content: center;
+ 
+ }
